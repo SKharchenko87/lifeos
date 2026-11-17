@@ -1,0 +1,3 @@
+module lifeos
+
+go 1.27.3
