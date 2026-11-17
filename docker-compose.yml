@@ -1,0 +1,14 @@
+services: 
+  postgres:
+    image: postgres:latest
+    ports:
+      - 15432:5432
+    environment:
+      POSTGRES_USER: lifeos
+      POSTGRES_PASSWORD: lifeos
+      POSTGRES_DB: lifeos
+    volumes:
+      - pgdata:/var/lib/postgresql
+
+volumes:
+  pgdata:
