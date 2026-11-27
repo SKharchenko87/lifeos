@@ -55,17 +55,17 @@ func main() {
 
 	err = rep.Create(ctx, &product0)
 	if err != nil {
-		log.Fatal("Ошибка при записи продукта 0: %v", err)
+		log.Fatalf("Ошибка при записи продукта 0: %v", err)
 	}
 
 	err = rep.Create(ctx, &product1)
 	if err != nil {
-		log.Fatal("Ошибка при записи продукта 1: %v", err)
+		log.Fatalf("Ошибка при записи продукта 1: %v", err)
 	}
 
 	p, err := rep.SearchBestMatch(ctx, "Творожок")
 	if err != nil {
-		log.Fatal("Ошибка поиска: %v", err)
+		log.Fatalf("Ошибка поиска: %v", err)
 	}
 	fmt.Printf("%v", p)
 
